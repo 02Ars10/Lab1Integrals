@@ -23,7 +23,6 @@ namespace lab1.Classes
             }
             sw.Stop();
             time = sw.Elapsed.TotalMilliseconds;
-            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             sum += (integral(downLim) + integral(upLim)) / 2;
             return h * sum;
         }
@@ -40,9 +39,9 @@ namespace lab1.Classes
             });
             sw.Stop();
             time = sw.Elapsed.TotalMilliseconds;
-            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             sum = (integral(upLim) + integral(downLim)) / 2 + vs.Sum();
             return sum * h;
+
         }
     }
 }

@@ -47,6 +47,7 @@ namespace lab1
             ICalculator calcult = GetCalculator();
             double result = calcult.ParallelCalculate(count, upLim, downLim, x => (12 * x) - Math.Log(11 * x) - 11, out time);
             MessageBox.Show($"Результат вычислений параллельно = {result.ToString()}");
+            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         private void Graphic_Click(object sender, RoutedEventArgs e)
         {
@@ -64,7 +65,7 @@ namespace lab1
             {
                 double time = 0;
                 ICalculator calcultGraph = GetCalculator();
-                double result = calcultGraph.Calculate(i, upLim, downLim, x => (12 * x) - Math.Log(11 * x) - 11, out time);
+                double res = calcultGraph.Calculate(i, upLim, downLim, x => (12 * x) - Math.Log(11 * x) - 11, out time);
                 lineSeries.Points.Add(new DataPoint(i, time));
             }
 
@@ -91,6 +92,7 @@ namespace lab1
             ICalculator calcult = GetCalculator();
             double result = calcult.Calculate(count, upLim, downLim, x => (12 * x) - Math.Log(11 * x) - 11, out time);
             MessageBox.Show($"Результат вычислений = {result.ToString()}");
+            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 

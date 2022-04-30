@@ -23,7 +23,6 @@ namespace lab1.Classes
             }
 
             time = sw.Elapsed.TotalMilliseconds;
-            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             return h * sum;
         }
             public double ParallelCalculate(int count, double upLim, double downLim, Func<double, double> integral, out double time)
@@ -42,8 +41,7 @@ namespace lab1.Classes
                 vs[i] = integral(downLim + h * i - 0.5 * h);
             });
             sw.Stop();
-            time = sw.Elapsed.TotalMilliseconds;
-            MessageBox.Show("Time (ms): " + Convert.ToString(time), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
+            time = sw.Elapsed.TotalMilliseconds;         
             sum =vs.Sum();
             return sum * h;
         }

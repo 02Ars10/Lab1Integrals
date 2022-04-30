@@ -39,12 +39,12 @@
         <TextBox x:Name="func" Text="12x-ln(11x)-11" Background="LightGreen" Grid.Column="1" Grid.Row="4" Margin="25,25,10,220"/>
         <Button x:Name="btCalculate" Content="Рассчёт интеграла" Background="LightBlue" Grid.Column="3" Grid.Row="5" Click="btCalculate_Click"/>
         <Button x:Name="Graphic" Content="Рассчёт графика" Background="LightBlue"  Grid.Column="3" Grid.Row="6" Click="Graphic_Click"/>
-
+<Button x:Name="btnCalculateParallel_Click" Content="Рассчёт интеграла parallel" Background="LightBlue" Grid.Column="2" Grid.Row="5" Click="btCalculateParallel_Click" Margin="208,10,207,10" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <oxy:PlotView
             x:Name="Graph"
             Grid.Column="2" Grid.Row="4">
         </oxy:PlotView>
-        <Button x:Name="btnCalculateParallel_Click" Content="Рассчёт интеграла parallel" Background="LightBlue" Grid.Column="2" Grid.Row="5" Click="btCalculateParallel_Click" Margin="208,10,207,10" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        
 
     </Grid>
 </Window>
